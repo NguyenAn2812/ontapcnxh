@@ -1,143 +1,104 @@
-﻿<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explorer</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+        }
+        
+        /* Sidebar chiếm toàn bộ màn hình */
+        .sidebar {
+            width: 100vw; /* Chiếm toàn bộ chiều rộng */
+            height: 100vh; /* Chiếm toàn bộ chiều cao */
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-shadow: none; /* Không cần hiệu ứng bóng */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            max-width: 300px; /* Giới hạn chiều rộng menu */
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            padding: 12px;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+            background-color: #444;
+        }
+
+        .sidebar a:hover {
+            background-color: #f0a500;
+        }
+    </style>
 </head>
+<body>
 
-<body class="stackedit">
-  <div class="stackedit__html"><h1 id="ôn-tập-cnxh-giữa-kỳ">Ôn tập CNXH giữa kỳ</h1>
-<h2 id="câu-hỏi-và-đáp-án">Câu hỏi và đáp án</h2>
-<h3 id="câu-1-sứ-mệnh-lịch-sử-của-giai-cấp-công-nhân-được-thể-hiện-trên-mấy-nội-dung-cơ-bản">Câu 1: Sứ mệnh lịch sử của giai cấp công nhân được thể hiện trên mấy nội dung cơ bản?</h3>
-<ul>
-<li><strong>Đáp án:</strong> 2 nội dung cơ bản</li>
-</ul>
-<h3 id="câu-2-sự-thay-thế-hình-thái-kinh-tế---xã-hội-tư-bản-chủ-nghĩa-bằng-hình-thái-kinh-tế---xã-hội-cộng-sản-chủ-nghĩa-xuất-phát-từ-vấn-đề-vật-chất-quan-trọng-nào">Câu 2: Sự thay thế hình thái kinh tế - xã hội tư bản chủ nghĩa bằng hình thái kinh tế - xã hội cộng sản chủ nghĩa xuất phát từ vấn đề vật chất quan trọng nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Sự phát triển của lực lượng sản xuất và sự trưởng thành của giai cấp công nhân</li>
-</ul>
-<h3 id="câu-3-nền-dân-chủ-nào-đạt-được-những-giá-trị-nổi-bật-về-quyền-tự-do-bình-đẳng-dân-chủ">Câu 3: Nền dân chủ nào đạt được những giá trị nổi bật về quyền tự do, bình đẳng, dân chủ?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Nền dân chủ cộng sản nguyên thủy</li>
-</ul>
-<h3 id="câu-4-cộng-đồng-dân-cư-muốn-tách-ra-để-hình-thành-cộng-đồng-dân-tộc-độc-lập-là">Câu 4: Cộng đồng dân cư muốn tách ra để hình thành cộng đồng dân tộc độc lập là?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Xu hướng khách quan phát triển của dân tộc</li>
-</ul>
-<h3 id="câu-5-học-thuyết-hình-thái-kinh-tế---xã-hội-do-c.mác-và-ph.anghen-xây-dựng-v.i-leenin-bổ-sung-phát-triển-và-thực-hiện-hóa-trong-công-cuộc-xây-dựng-chủ-nghĩa-xã-hội-ở-đâu">Câu 5: Học thuyết hình thái kinh tế - xã hội do C.Mác và Ph.Anghen xây dựng, V.I Leenin bổ sung, phát triển và thực hiện hóa trong công cuộc xây dựng chủ nghĩa xã hội ở đâu?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Cách mạng ở Nga</li>
-</ul>
-<h3 id="câu-6-trên-phương-diện-nào-dân-chủ-là-quyền-lực-thuộc-về-nhân-dân-nhân-dân-là-chủ-nhân-của-nhà-nước">Câu 6: Trên phương diện nào dân chủ là quyền lực thuộc về nhân dân, nhân dân là chủ nhân của nhà nước?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Quyền lực</li>
-</ul>
-<h3 id="câu-7-về-mặt-lí-luận-và-thực-tiễn-những-nước-chưa-trải-qua-chủ-nghĩa-tư-bản-phát-triển-cần-thiết-phải-có-một-thời-kì-quá-độ-như-thế-nào-từ-chủ-nghĩa-tư-bản-lên-chủ-nghĩa-xã-hội">Câu 7: Về mặt lí luận và thực tiễn, những nước chưa trải qua chủ nghĩa tư bản phát triển, cần thiết phải có một thời kì quá độ như thế nào từ chủ nghĩa tư bản lên chủ nghĩa xã hội?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Thời kì quá độ khá lâu dài</li>
-</ul>
-<h3 id="câu-8-một-trong-những-đặc-điểm-nổi-bật-thời-kỳ-quá-độ-lên-cnxh-ở-việt-nam-là-gì">Câu 8: Một trong những đặc điểm nổi bật thời kỳ quá độ lên CNXH ở Việt Nam là gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Bỏ qua chế độ tư bản chủ nghĩa</li>
-</ul>
-<h3 id="câu-9-đối-với-những-nước-đã-trải-qua-chủ-nghĩa-tư-bản-phát-triển-đi-lên-chủ-nghĩa-cộng-sản-sẽ-trải-qua-thời-kì-quá-độ-nào">Câu 9: Đối với những nước đã trải qua chủ nghĩa tư bản phát triển đi lên chủ nghĩa cộng sản sẽ trải qua thời kì quá độ nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Quá độ trực tiếp</li>
-</ul>
-<h3 id="câu-10-trên-phương-diện-nào-dân-chủ-là-một-nguyên-tắc-–-nguyên-tắc-dân-chủ">Câu 10: Trên phương diện nào dân chủ là một nguyên tắc – nguyên tắc dân chủ?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Tổ chức và quản lí xã hội</li>
-</ul>
-<h3 id="câu-11-điền-vào-chỗ-trống">Câu 11: Điền vào chỗ trống:</h3>
-<blockquote>
-<p>“Xây dựng giai cấp công nhân lớn mạnh là trách nhiệm của cả hệ thống chính trị, của toàn xã hội và sự nỗ lực vươn lên của bản thân mỗi người công nhân, sự tham gia đóng góp tích cực của…”</p>
-</blockquote>
-<ul>
-<li><strong>Đáp án:</strong> Tổ chức công đoàn</li>
-</ul>
-<h3 id="câu-12-nội-dung-chủ-yếu-và-mục-tiêu-cuối-cùng-của-nhà-nước-xhcn-là-gì">Câu 12: Nội dung chủ yếu và mục tiêu cuối cùng của nhà nước XHCN là gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Cải tạo xã hội cũ, xây dựng thành công CNXH</li>
-</ul>
-<h3 id="câu-13-ở-các-nước-định-hướng-xhcn-ngày-nay-nơi-đảng-cộng-sản-cầm-quyền-nội-dung-sứ-mệnh-lịch-sử-của-giai-cấp-công-nhân-về-chính-trị---xã-hội-là-gì">Câu 13: Ở các nước định hướng XHCN ngày nay, nơi Đảng Cộng Sản cầm quyền, nội dung sứ mệnh lịch sử của giai cấp công nhân về chính trị - xã hội là gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Xây dựng nhà nước xã hội chủ nghĩa, xây dựng Đảng trong sạch vững mạnh</li>
-</ul>
-<h3 id="câu-14-theo-cương-lĩnh-dân-tộc-chủ-nghĩa-mác---lê-nin-quyền-thiêng-liêng-của-các-dân-tộc-không-phân-biệt-dân-tộc-lớn-hay-nhỏ-ở-trình-độ-phát-triển-cao-hay-thấp-là-gì">Câu 14: Theo cương lĩnh dân tộc chủ nghĩa Mác - Lê nin, quyền thiêng liêng của các dân tộc, không phân biệt dân tộc lớn hay nhỏ, ở trình độ phát triển cao hay thấp là gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Các dân tộc hoàn toàn bình đẳng</li>
-</ul>
-<h3 id="câu-15-tác-phẩm-nào-của-mác-và-anghen-đánh-dấu-sự-ra-đời-của-chủ-nghĩa-cộng-sản">Câu 15: Tác phẩm nào của Mác và Anghen đánh dấu sự ra đời của chủ nghĩa cộng sản?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Tuyên ngôn của Đảng Cộng sản</li>
-</ul>
-<h3 id="câu-16-trong-thời-kì-quá-độ-đi-lên-cnxh-ở-việt-nam-giai-cấp-nào-có-xu-hướng-giảm-dần-về-số-lượng">Câu 16: Trong thời kì quá độ đi lên CNXH ở Việt Nam, giai cấp nào có xu hướng giảm dần về số lượng?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Giai cấp nông dân</li>
-</ul>
-<h3 id="câu-17-ngày-nay-sự-phát-triển-của-khoa-học---công-nghệ-và-tri-thức-làm-giai-cấp-công-nhân-có-xu-hướng-như-thế-nào">Câu 17: Ngày nay, sự phát triển của khoa học - công nghệ và tri thức làm giai cấp công nhân có xu hướng như thế nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Tổng thu nhập tăng</li>
-</ul>
-<h3 id="câu-18-những-phương-diện-cơ-bản-khi-nghiên-cứu-về-giai-cấp-công-nhân-là-gì">Câu 18: Những phương diện cơ bản khi nghiên cứu về giai cấp công nhân là gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Phương diện kinh tế - xã hội và chính trị - xã hội</li>
-</ul>
-<h3 id="câu-19-chủ-nghĩa-mác---lê-nin-cho-rằng-tôn-giáo-là-gì">Câu 19: Chủ nghĩa Mác - Lê nin cho rằng tôn giáo là gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Một hình thái ý thức xã hội, phản ánh hư ảo thực tại khách quan</li>
-</ul>
-<h3 id="câu-20-c.mác-và-anghen-đã-luận-chứng-và-khẳng-định-về-phương-diện-chính-trị---xã-hội-sự-diệt-vong-không-tránh-khỏi-của-chủ-nghĩa-tư-bản-và-sự-thắng-lợi-tất-yếu-của-chủ-nghĩa-xã-hội-trong-phát-kiến-nào">Câu 20: C.Mác và Anghen đã “luận chứng và khẳng định về phương diện chính trị - xã hội sự diệt vong không tránh khỏi của chủ nghĩa tư bản và sự thắng lợi tất yếu của chủ nghĩa xã hội” trong phát kiến nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Học thuyết sứ mệnh lịch sử của giai cấp công nhân</li>
-</ul>
-<h3 id="câu-21-tác-phẩm-nào-đã-đánh-dấu-sự-chuyển-biến-thế-giới-quan-của-ph.-anghen">Câu 21: Tác phẩm nào đã đánh dấu sự chuyển biến thế giới quan của Ph. Anghen?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Tuyên ngôn của Đảng Cộng sản</li>
-</ul>
-<h3 id="câu-22-dân-chủ-xhcn-có-vai-trò-như-thế-nào-đối-với-nhà-nước-xhcn">Câu 22: Dân chủ XHCN có vai trò như thế nào đối với nhà nước XHCN?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Là phương thức thể hiện và thực hiện dân chủ</li>
-</ul>
-<h3 id="câu-23-quyền-lực-của-nhà-nước-pháp-quyền-xhcn-ở-việt-nam-được-tổ-chức-như-thế-nào">Câu 23: Quyền lực của nhà nước pháp quyền XHCN ở Việt Nam được tổ chức như thế nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Thống nhất, có sự phân công, phối hợp giữa các cơ quan lập pháp, hành pháp và tư pháp</li>
-</ul>
-<h3 id="câu-24-theo-nhận-định-của-mác-và-anghen-giai-cấp-công-nhân-anh-là-đứa-con-của-nền-sản-xuất-nào">Câu 24: Theo nhận định của Mác và Anghen, giai cấp công nhân Anh là đứa con của nền sản xuất nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Công nghiệp hiện đại</li>
-</ul>
-<h3 id="câu-25-điền-vào-chỗ-trống">Câu 25: Điền vào chỗ trống:</h3>
-<blockquote>
-<p>“Xét ở góc độ chính trị, quy luật mang tính phổ biến cho các cuộc đấu tranh của các giai cấp đứng ở vị trí trung tâm đều phải tìm cách…”</p>
-</blockquote>
-<ul>
-<li><strong>Đáp án:</strong> Liên minh</li>
-</ul>
-<h3 id="câu-26-đại-biểu-tiêu-biểu-của-triết-học-cổ-điển-đức-cuối-thế-kỷ-xviii-đầu-thế-kỷ-xix-là-ai">Câu 26: Đại biểu tiêu biểu của triết học cổ điển Đức cuối thế kỷ XVIII đầu thế kỷ XIX là ai?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Hegel và Feuerbach</li>
-</ul>
-<h3 id="câu-27-xây-dựng-nhà-nước-pháp-quyền-xhcn-nhân-dân-do-nhân-dân-vì-nhân-dân-là-nội-dung-liên-minh-trên-lĩnh-vực-nào">Câu 27: Xây dựng nhà nước pháp quyền XHCN nhân dân, do nhân dân, vì nhân dân là nội dung liên minh trên lĩnh vực nào?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Chính trị</li>
-</ul>
-<h3 id="câu-28-trong-thời-kì-quá-độ-lên-cnxh-nền-kinh-tế-có-đặc-điểm-gì">Câu 28: Trong thời kì quá độ lên CNXH, nền kinh tế có đặc điểm gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Tồn tại nền kinh tế nhiều thành phần, có những thành phần đối lập nhau</li>
-</ul>
-<h3 id="câu-29-đặc-trưng-nào-thể-hiện-sự-khác-biệt-về-chất-giữa-hình-thái-kinh-tế---xã-hội-cộng-sản-chủ-nghĩa-so-với-các-hình-thái-kinh-tế---xã-hội-trước-đó">Câu 29: Đặc trưng nào thể hiện sự khác biệt về chất giữa hình thái kinh tế - xã hội cộng sản chủ nghĩa so với các hình thái kinh tế - xã hội trước đó?</h3>
-<ul>
-<li><strong>Đáp án:</strong> (Chưa có đáp án)</li>
-</ul>
-<h3 id="câu-30-trong-chế-độ-cộng-sản-nguyên-thủy-hình-thức-manh-nha-của-dân-chủ-có-đặc-trưng-gì">Câu 30: Trong chế độ cộng sản nguyên thủy, hình thức manh nha của dân chủ có đặc trưng gì?</h3>
-<ul>
-<li><strong>Đáp án:</strong> Nhân dân bầu ra thủ lĩnh quân sự thông qua đại hội nhân dân</li>
-</ul>
-</div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>📁 File Explorer</h2>
+        <ul id="nav-links">
+            <!-- Danh sách file sẽ được thêm tự động -->
+        </ul>
+    </div>
+
+    <script>
+        // Danh sách file cần hiển thị
+        const pages = [
+            { name: "CNXH-giữa-kì - Ôn tập CNXH giữa kì", url: "CNXH-giữa-kì - Ôn tập CNXH giữa kì.html" },
+            { name: "Cnxhkh thi giữa kì 1", url: "Cnxhkh thi giữa kì 1.html" },
+            { name: "Ôn tập - Chương 1 Cnxhkh ", url: "Ôn tập - Chương 1 Cnxhkh .html" },
+            { name: "TRẮC NGHIỆM GIỮA KÌ MÔN CHỦ NGHĨA (Tham khảo)", url: "TRẮC NGHIỆM GIỮA KÌ MÔN CHỦ NGHĨA.html" }
+        ];
+
+        // Lấy phần tử UL để thêm menu
+        const navLinks = document.getElementById("nav-links");
+
+        // Tạo danh sách menu từ danh sách file
+        pages.forEach(page => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = page.url;
+            a.textContent = page.name;
+            li.appendChild(a);
+            navLinks.appendChild(li);
+        });
+    </script>
+
 </body>
-
 </html>
