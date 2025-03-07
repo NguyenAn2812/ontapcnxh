@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+        }
+        
+        /* Sidebar chiếm toàn bộ màn hình */
+        .sidebar {
+            width: 100vw; /* Chiếm toàn bộ chiều rộng */
+            height: 100vh; /* Chiếm toàn bộ chiều cao */
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-shadow: none; /* Không cần hiệu ứng bóng */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            max-width: 300px; /* Giới hạn chiều rộng menu */
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            padding: 12px;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+            background-color: #444;
+        }
+
+        .sidebar a:hover {
+            background-color: #f0a500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>📁 File Explorer</h2>
+        <ul id="nav-links">
+            <!-- Danh sách file sẽ được thêm tự động -->
+        </ul>
+    </div>
+
+    <script>
+        // Danh sách file cần hiển thị
+        const pages = [
+            { name: "CNXH-giữa-kì - Ôn tập CNXH giữa kì", url: "CNXH-giữa-kì - Ôn tập CNXH giữa kì.html" },
+            { name: "Cnxhkh thi giữa kì 1", url: "Cnxhkh thi giữa kì 1.html" },
+            { name: "Ôn tập - Chương 1 Cnxhkh - Ôn tập lý thuyết và thực hành toàn bộ Chương 1 môn Chủ nghĩa xã hội khoa học", url: "Ôn tập - Chương 1 Cnxhkh - Ôn tập lý thuyết và thực hành toàn bộ Chương 1 môn Chủ nghĩa xã hội khoa học.html" },
+            { name: "TRẮC NGHIỆM GIỮA KÌ MÔN CHỦ NGHĨA", url: "TRẮC NGHIỆM GIỮA KÌ MÔN CHỦ NGHĨA.html" }
+        ];
+
+        // Lấy phần tử UL để thêm menu
+        const navLinks = document.getElementById("nav-links");
+
+        // Tạo danh sách menu từ danh sách file
+        pages.forEach(page => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = page.url;
+            a.textContent = page.name;
+            li.appendChild(a);
+            navLinks.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
